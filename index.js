@@ -1,17 +1,16 @@
-const refs ={
-        days: document.querySelector('span[data-value="days"]'),
-        hours: document.querySelector('span[data-value="hours"]'),
-        mins:document.querySelector('span[data-value="mins"]'),
-        secs: document.querySelector('span[data-value="secs"]'),
-        timer:document.querySelector('.timer'),}
-
-
- class Timer {
-        constructor({selector,targetDate}) {
-          this.selector = selector;
-          this.targetDate = targetDate;
-        }
-        start() {     
+class Timer {
+    constructor({selector,targetDate}) {
+      this.selector = selector;
+      this.targetDate = targetDate;
+ 
+      this.refs ={
+             days: document.querySelector('span[data-value="days"]'),
+             hours: document.querySelector('span[data-value="hours"]'),
+             mins:document.querySelector('span[data-value="mins"]'),
+             secs: document.querySelector('span[data-value="secs"]'),
+             timer:document.querySelector('.timer'), };
+}
+    start() {     
             setInterval(() => {
                 const currentTeme =  Date.now()
                 const deltaTime = this.targetDate - currentTeme;
@@ -32,12 +31,12 @@ const refs ={
         }
     
         updateClockface({ days, hours, mins, secs }) {
-            refs.days.textContent = days;
-            refs.hours.textContent = hours;
-            refs.mins.textContent = mins;
-            refs.secs.textContent = secs;
+            this.refs.days.textContent = days;
+            this.refs.hours.textContent = hours;
+            this.refs.mins.textContent = mins;
+            this.refs.secs.textContent = secs;
         }
-    };
+    }
     
     
     
