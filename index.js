@@ -38,12 +38,12 @@ class Timer {
         }
     }
     
-    
-    
     const CountdownTimer = new Timer({
         selector: '#timer-1',
         targetDate: new Date('Jul 17, 2021'),
     });
     
     CountdownTimer.start();
+    
+    
 
