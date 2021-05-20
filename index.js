@@ -4,11 +4,11 @@ class Timer {
       this.targetDate = targetDate;
  
       this.refs ={
-             days: document.querySelector('span[data-value="days"]'),
-             hours: document.querySelector('span[data-value="hours"]'),
-             mins:document.querySelector('span[data-value="mins"]'),
-             secs: document.querySelector('span[data-value="secs"]'),
-             timer:document.querySelector('.timer'), };
+             days: document.querySelector(`${selector} span[data-value="days"]`),
+             hours:document.querySelector(`${selector} span[data-value="hours"]`),
+             mins:document.querySelector(`${selector} span[data-value="mins"]`),
+             secs:document.querySelector(`${selector} span[data-value="secs"]`),
+             timer:document.querySelector(`${selector}`), };
 }
     start() {     
             setInterval(() => {
